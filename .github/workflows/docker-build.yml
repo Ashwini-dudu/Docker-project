@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  docker-build:
+  docker-build-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,3 +18,12 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t ashwini-web:v1 .
+
+      - name: Run Docker container
+        run: docker run -d -p 8080:80 --name test-container ashwini-web:v1
+
+      - name: Test website response
+        run: curl -f http://localhost:8080
+
+      - name: Stop Docker container
+        run: docker stop test-container
