@@ -131,7 +131,21 @@ http://13.xxx.xxx.xxx
 ```
 
 ---
+## CI/CD Pipeline with GitHub Actions
 
+This project includes a GitHub Actions workflow that automatically runs on every push or pull request to the main branch.
+
+The workflow performs the following steps:
+
+1. Checks out the repository.
+2. Builds the Docker image.
+3. Runs the Docker container.
+4. Validates the website using curl.
+5. Stops the container after validation.
+
+This helped me understand Continuous Integration, Docker image validation, and automated application testing.
+
+---
 ## Useful Docker Commands
 
 ### View Running Containers
