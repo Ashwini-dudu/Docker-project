@@ -34,7 +34,7 @@ COPY index.html /usr/share/nginx/html/index.html
 
 ### Explanation
 
-* `FROM nginx` – Uses the official Nginx image as the base image.
+* `FROM nginx` – Uses the official Nginx image as the base image
 * `COPY index.html /usr/share/nginx/html/index.html` – Copies the custom web page into the default Nginx web root.
 
 ---
